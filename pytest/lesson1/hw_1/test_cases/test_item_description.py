@@ -41,3 +41,5 @@ def test_click_on_name():
     name_button.click()
 
     assert chrome.current_url == "https://www.saucedemo.com/inventory-item.html?id=4"
+
+    chrome.quit()

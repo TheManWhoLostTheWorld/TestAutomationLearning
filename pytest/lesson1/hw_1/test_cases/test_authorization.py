@@ -19,7 +19,7 @@ def test_authentification_positive():
     time.sleep(5)
     assert chrome.current_url == 'https://www.saucedemo.com/inventory.html'
 
-    chrome.quit()
+    # chrome.quit()
 
 def test_authentification_negative():
     chrome.get('https://www.saucedemo.com')

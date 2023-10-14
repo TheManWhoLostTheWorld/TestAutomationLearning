@@ -28,7 +28,7 @@ def test_add_to_cart_from_catalog():
     if chrome.find_element(By.XPATH, "//div[text()='Sauce Labs Backpack']"):
         pass
 
-    chrome.quit()
+    # chrome.quit()
 
 def test_remove_item_from_cart_through_cart():
     chrome.get('https://www.saucedemo.com')
@@ -44,8 +44,8 @@ def test_remove_item_from_cart_through_cart():
 
     time.sleep(1)
 
-    add_button = chrome.find_element(By.XPATH, "//*[@data-test='add-to-cart-sauce-labs-backpack']")
-    add_button.click()
+    # add_button = chrome.find_element(By.XPATH, "//*[@data-test='add-to-cart-sauce-labs-backpack']")
+    # add_button.click()
 
     cart_button = chrome.find_element(By.XPATH, "//*[@class='shopping_cart_link']")
     cart_button.click()
@@ -55,6 +55,8 @@ def test_remove_item_from_cart_through_cart():
 
     if chrome.find_element(By.XPATH, "//*[@class='removed_cart_item']"):
         pass
+
+    # chrome.quit()
 
 def test_item_to_cart_from_description():
     chrome.get('https://www.saucedemo.com')
@@ -84,7 +86,7 @@ def test_item_to_cart_from_description():
     if chrome.find_element(By.XPATH, "//div[text()='Sauce Labs Backpack']"):
         pass
 
-    chrome.quit()
+    # chrome.quit()
 
 def test_remove_item_from_cart_through_description():
     chrome.get('https://www.saucedemo.com')
@@ -98,8 +100,8 @@ def test_remove_item_from_cart_through_description():
     login_button = chrome.find_element(By.XPATH, '//*[@id="login-button"]')
     login_button.click()
 
-    add_button = chrome.find_element(By.XPATH, "//*[@data-test='add-to-cart-sauce-labs-backpack']")
-    add_button.click()
+    # add_button = chrome.find_element(By.XPATH, "//*[@data-test='add-to-cart-sauce-labs-backpack']")
+    # add_button.click()
 
     cart_button = chrome.find_element(By.XPATH, "//*[@class='shopping_cart_link']")
     cart_button.click()
@@ -120,6 +122,7 @@ def test_remove_item_from_cart_through_description():
     except NoSuchElementException:
         pass
 
+    chrome.quit()
 
 
 

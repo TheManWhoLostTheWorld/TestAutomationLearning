@@ -46,3 +46,5 @@ def test_order_with_correct_data():
 
     if chrome.find_element(By.XPATH, "//h2[text()='Thank you for your order!']"):
         pass
+
+    chrome.quit()
